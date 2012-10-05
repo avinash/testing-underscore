@@ -28,7 +28,7 @@ $(function () {
 	// reduce
 	begin();
 	var students = [{ name: "John", mark: 5 }, { name: "Jane", mark: 7 }];
-	var total = _.reduce(students, function(runningtotal, student) { return runningtotal += student.mark; }, 0);
+	var total = _.reduce(students, function(runningtotal, student) { return runningtotal + student.mark; }, 0);
 	result += "Total " + total;
 	end();
 
@@ -78,7 +78,7 @@ $(function () {
 	// isEqual
 	begin();
 	var students1 = [{ name: "John", mark: 5, address: [ "Quatre-Bornes", "Mauritius" ] }, { name: "Jane", mark: 7 }];
-	var students2 = [{ name: "John", mark: 5, address: [ "Quatre_Bornes", "mauritius" ] }, { name: "Jane", mark: 7 }];
+	var students2 = [{ name: "John", mark: 5, address: [ "Quatre-Bornes", "mauritius" ] }, { name: "Jane", mark: 7 }];
 	if (_.isEqual(students1, students2))
 		result += "They are equal";
 	else
