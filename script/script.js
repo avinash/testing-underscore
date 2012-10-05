@@ -68,7 +68,7 @@ $(function () {
 	begin();
 	var students = [{ name: "John", mark: 5 }, { name: "Jane", mark: 7 }];
 	var count = _.size(students);
-	var total = _.reduce(students, function(runningtotal, student) { return runningtotal += student.mark; }, 0);
+	var total = _.reduce(students, function(runningtotal, student) { return runningtotal + student.mark; }, 0);
 	var average = total / count;
 	var data = { count: count, average: average };
 	var template = "There are <%= count %> students and their average mark is <%= average %>";
